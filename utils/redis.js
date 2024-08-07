@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import { createClient } from 'redis';
 
 class RedisClient {
