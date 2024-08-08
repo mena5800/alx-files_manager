@@ -67,7 +67,7 @@ class FilesController {
     const localPath = path.join(folderPath, uuidv4());
     fs.writeFileSync(localPath, Buffer.from(data, 'base64'));
 
-    fileDocument.localPath = localPath;
+    // fileDocument.localPath = localPath;
 
     const result = await dbClient.db.collection('files').insertOne(fileDocument);
     fileDocument.id = result.insertedId.toString();
